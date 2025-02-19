@@ -32,3 +32,4 @@ To build or run the project, use one of the following Gradle tasks:
 
 Upon successful startup, you should see output similar to:
 
+git
