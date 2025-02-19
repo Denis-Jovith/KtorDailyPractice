@@ -19,6 +19,8 @@ repositories {
 }
 
 dependencies {
+
+    implementation("io.ktor:ktor-server-status-pages:2.3.0")
     implementation(libs.ktor.server.core)
     implementation(libs.ktor.server.cio)
     implementation(libs.logback.classic)
