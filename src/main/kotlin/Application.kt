@@ -1,5 +1,6 @@
 package com.example
 
+import io.ktor.http.*
 import io.ktor.server.application.*
 import io.ktor.server.cio.*
 import io.ktor.server.engine.*
@@ -17,3 +18,4 @@ fun main() {
 fun Application.module() {
     configureRouting()
 }
+
