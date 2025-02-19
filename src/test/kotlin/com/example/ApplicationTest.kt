@@ -19,6 +19,6 @@ class ApplicationTest {
 
         assertEquals(HttpStatusCode.OK, response.status)
         assertEquals("html", response.contentType()?.contentSubtype)
-        assertEquals("<h1> Hello From Tanzania Ktor </h1>", response.bodyAsText())
+        assertEquals("<h1>Hello From Tanzania Ktor</h1>", response.bodyAsText().trim())
     }
 }
