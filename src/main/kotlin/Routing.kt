@@ -19,5 +19,7 @@ fun Application.configureRouting() {
             val type = ContentType.parse("text/html")
             call.respondText(text, type)
         }
+
     }
+
 }
