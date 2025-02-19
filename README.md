@@ -1,43 +1,34 @@
-<<<<<<< HEAD
-# KtorDailyPractice
-=======
-# ktor-sample-firstOne
+# Ktor Daily Practice - Back to Learning with Commitment
 
-This project was created using the [Ktor Project Generator](https://start.ktor.io).
+This project marks my return to mastering Ktor and expanding my web development skills. I'm committed to continuous learning, exploring new Ktor features, and applying them in real-world scenarios.
 
-Here are some useful links to get you started:
+## Useful Links
 
-- [Ktor Documentation](https://ktor.io/docs/home.html)
-- [Ktor GitHub page](https://github.com/ktorio/ktor)
-- The [Ktor Slack chat](https://app.slack.com/client/T09229ZC6/C0A974TJ9). You'll need to [request an invite](https://surveys.jetbrains.com/s3/kotlin-slack-sign-up) to join.
+- [Ktor Documentation](https://ktor.io/docs/home.html) – The official Ktor documentation for reference.
+- [Ktor GitHub Page](https://github.com/ktorio/ktor) – Explore the official Ktor GitHub repository.
+- [Ktor Slack Chat](https://app.slack.com/client/T09229ZC6/C0A974TJ9) – Join the Ktor community on Slack (request an invite [here](https://surveys.jetbrains.com/s3/kotlin-slack-sign-up)).
 
 ## Features
 
-Here's a list of features included in this project:
+This project incorporates some foundational Ktor features, which are integral to understanding the framework:
 
-| Name                                               | Description                                                 |
-| ----------------------------------------------------|------------------------------------------------------------- |
-| [Routing](https://start.ktor.io/p/routing-default) | Allows to define structured routes and associated handlers. |
+| Feature     | Description                                                 |
+|-------------|------------------------------------------------------------- |
+| **Routing** | Allows defining structured routes and associated handlers.  |
 
 ## Building & Running
 
-To build or run the project, use one of the following tasks:
+To build or run the project, use one of the following Gradle tasks:
 
-| Task                          | Description                                                          |
-| -------------------------------|---------------------------------------------------------------------- |
-| `./gradlew test`              | Run the tests                                                        |
-| `./gradlew build`             | Build everything                                                     |
-| `buildFatJar`                 | Build an executable JAR of the server with all dependencies included |
-| `buildImage`                  | Build the docker image to use with the fat JAR                       |
-| `publishImageToLocalRegistry` | Publish the docker image locally                                     |
-| `run`                         | Run the server                                                       |
-| `runDocker`                   | Run using the local docker image                                     |
+| Task                              | Description                                                          |
+|-----------------------------------|---------------------------------------------------------------------- |
+| `./gradlew test`                 | Run the tests                                                        |
+| `./gradlew build`                | Build the project                                                     |
+| `buildFatJar`                     | Create an executable JAR of the server with all dependencies included |
+| `buildImage`                      | Build the Docker image for the fat JAR                               |
+| `publishImageToLocalRegistry`    | Publish the Docker image locally                                      |
+| `run`                             | Run the server                                                       |
+| `runDocker`                       | Run using the local Docker image                                     |
 
-If the server starts successfully, you'll see the following output:
+Upon successful startup, you should see output similar to:
 
-```
-2024-12-04 14:32:45.584 [main] INFO  Application - Application started in 0.303 seconds.
-2024-12-04 14:32:45.682 [main] INFO  Application - Responding at http://0.0.0.0:8080
-```
-
->>>>>>> 267a9cf (Back again to Ktor HELLO WORLD ��)
