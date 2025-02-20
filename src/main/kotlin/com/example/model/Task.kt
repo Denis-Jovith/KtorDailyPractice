@@ -17,3 +17,10 @@ fun Task.taskAsRow() = """
         <td>$priority</td>
     </tr>
 """.trimIndent()
+
+fun List<Task>.taskAsTable() = this.joinToString(
+    prefix = "<table rules=\"all\">",
+    postfix = "</table>",
+    separator = "\n",
+    transform = Task :: taskAsRow
+)
