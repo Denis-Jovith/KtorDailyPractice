@@ -10,5 +10,8 @@ object TaskRepository{
 
     fun allTasks(): List<Task> = tasks
 
+    fun tasksByPriority(priority: Priority) = tasks.filter {
+        it.priority == priority
+    }
 
 }
