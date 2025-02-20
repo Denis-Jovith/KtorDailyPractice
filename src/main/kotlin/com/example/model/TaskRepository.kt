@@ -14,4 +14,8 @@ object TaskRepository{
         it.priority == priority
     }
 
+    fun taskByName(name: String) = tasks.find{
+        it.name.equals(name,ignoreCase = true)
+    }
+
 }
