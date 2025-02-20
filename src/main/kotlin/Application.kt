@@ -17,5 +17,6 @@ fun main() {
 
 fun Application.module() {
     configureRouting()
+    configureRouting1()
 }
 
