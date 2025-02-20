@@ -9,3 +9,11 @@ data class Task(
     val description:String,
     val priority:Priority
 )
+
+fun Task.taskAsRow() = """
+    <tr>
+        <td>$name</td>
+        <td>$description</td>
+        <td>$priority</td>
+    </tr>
+""".trimIndent()
