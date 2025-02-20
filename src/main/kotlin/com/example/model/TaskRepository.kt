@@ -18,4 +18,11 @@ object TaskRepository{
         it.name.equals(name,ignoreCase = true)
     }
 
+    fun addTask(task:Task){
+        if(taskByName(task.name) != null ) {
+            throw IllegalStateException("Cannot duplicate task names !")
+        }
+        tasks.add(task)
+    }
+
 }
