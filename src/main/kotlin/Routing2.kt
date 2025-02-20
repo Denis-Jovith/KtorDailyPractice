@@ -1,6 +1,7 @@
 package com.example
 
-import com.example.com.example.model.task
+import com.example.com.example.model.Task
+import com.example.com.example.model.TaskRepository
 import com.example.com.example.model.taskAsTable
 import io.ktor.http.*
 import io.ktor.server.application.*
@@ -14,6 +15,7 @@ import io.ktor.server.routing.*
 fun Application.configureRouting1(){
     routing{
         get("/task"){
+            val tasks = TaskRepository.allTasks()
             call.respondText(
                 contentType = ContentType.parse("text/html"),
 //                text = """
@@ -23,11 +25,8 @@ fun Application.configureRouting1(){
 //                        <li>A form to submit new tasks</li>
 //                    </ol>
 //                """.trimIndent()
-
-
-                text = task.taskAsTable()
+                text = tasks.taskAsTable()
             )
-
         }
     }
 }
