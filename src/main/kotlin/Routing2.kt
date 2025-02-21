@@ -12,7 +12,6 @@ import io.ktor.server.response.*
 import io.ktor.server.routing.*
 
 
-
 fun Application.configureRouting1(){
     routing{
         get("/task"){
