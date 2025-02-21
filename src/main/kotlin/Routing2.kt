@@ -36,6 +36,7 @@ fun Application.configureRouting1(){
                 call.respond(HttpStatusCode.BadRequest)
                 return@get
             }
+
             try {
                 val priority = Priority.valueOf(priorityAsText)
                 val tasks = TaskRepository.tasksByPriority(priority)
