@@ -1,5 +1,6 @@
 package com.example
 
+import com.example.com.example.model.Priority
 import com.example.com.example.model.Task
 import com.example.com.example.model.TaskRepository
 import com.example.com.example.model.taskAsTable
@@ -32,8 +33,26 @@ fun Application.configureRouting1(){
         get("/tasks/byPriority/{priority}"){
             val priorityAsText = call.parameters["priority"]
             if (priorityAsText == null) {
+                call.respond(HttpStatusCode.BadRequest)
+                return@get
+            }
+            try {
+                val priority = Priority.valueOf(priorityAsText)
+                val tasks = TaskRepository.tasksByPriority(priority)
 
+                if(tasks.isEmpty()){
+                    call.respond(HttpStatusCode.NotFound)
+                    return@get
+                }
 
+                call.respondText(
+                    contentType = ContentType.parse("text/html"),
+                    text = tasks.taskAsTable()
+                )
+            }
+
+            catch(ex: IllegalArgumentException){
+                call.respond(HttpStatusCode.BadRequest)
             }
         }
     }
