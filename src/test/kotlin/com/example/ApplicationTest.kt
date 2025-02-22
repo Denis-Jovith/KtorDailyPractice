@@ -22,6 +22,6 @@ fun tasksCanBeFoundByPriority() = testApplication {
 
     assertEquals(HttpStatusCode.OK,response.status)
     assertContains(body,"Mow the lawn")
-    assertContains(body,"Paint the fense")
+    assertContains(body,"Paint the fence")
 }
 }
