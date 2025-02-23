@@ -14,6 +14,8 @@ import io.ktor.server.routing.*
 
 fun Application.configureRouting1(){
     routing{
+        staticResources("/task-ui","task-ui")
+
         get("/task"){
             val tasks = TaskRepository.allTasks()
             call.respondText(
