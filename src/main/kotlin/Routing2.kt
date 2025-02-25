@@ -38,7 +38,7 @@ fun Application.configureRouting1(){
                 return@get
             }
 
-            
+
             try {
                 val priority = Priority.valueOf(priorityAsText)
                 val tasks = TaskRepository.tasksByPriority(priority)
