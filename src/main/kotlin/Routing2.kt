@@ -30,6 +30,7 @@ fun Application.configureRouting1(){
                 text = tasks.taskAsTable()
             )
         }
+        
 
         get("/tasks/byPriority/{priority}"){
             val priorityAsText = call.parameters["priority"]
